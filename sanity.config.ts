@@ -10,7 +10,18 @@ export default defineConfig({
   projectId: 'utfyduj3',
   dataset: 'production',
 
-  plugins: [structureTool(), visionTool()],
+  plugins: [
+    structureTool({
+      structure: (S) =>
+        S.list()
+          .title('Content')
+          .items([
+            S.documentTypeListItem('post').title('post'),
+            S.documentTypeListItem('project').title('project'),
+          ]),
+    }),
+    visionTool(),
+  ],
 
   schema: {
     types: schemaTypes,
