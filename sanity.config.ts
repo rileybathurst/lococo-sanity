@@ -15,9 +15,19 @@ export default defineConfig({
       structure: (S) =>
         S.list()
           .title('Content')
+
           .items([
+            // Our singleton type has a list item with a custom child
+            S.listItem()
+              .title('about')
+              .id('about')
+              .child(S.document().schemaType('about').documentId('about')),
+
             S.documentTypeListItem('post').title('post'),
             S.documentTypeListItem('project').title('project'),
+            S.documentTypeListItem('slider').title('slider'),
+            S.documentTypeListItem('service').title('service'),
+            S.documentTypeListItem('testimonial').title('testimonial'),
           ]),
     }),
     visionTool(),
