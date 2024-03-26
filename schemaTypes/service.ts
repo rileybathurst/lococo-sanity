@@ -35,8 +35,13 @@ export default defineType({
     defineField({
       name: 'project',
       title: 'Project',
-      type: 'reference',
-      to: [{type: 'project'}],
+      type: 'array',
+      of: [
+        {
+          type: 'reference',
+          to: {type: 'project'},
+        },
+      ],
     }),
   ],
 })

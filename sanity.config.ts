@@ -28,6 +28,7 @@ export default defineConfig({
             S.documentTypeListItem('slider').title('slider'),
             S.documentTypeListItem('service').title('service'),
             S.documentTypeListItem('testimonial').title('testimonial'),
+            S.documentTypeListItem('texture').title('texture'),
           ]),
     }),
     visionTool(),
