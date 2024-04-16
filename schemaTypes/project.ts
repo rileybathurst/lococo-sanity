@@ -20,6 +20,15 @@ export default defineType({
       },
     }),
     defineField({
+      name: 'excerpt',
+      title: 'Excerpt',
+      type: 'text',
+      options: {
+        minLength: 50,
+        maxLength: 160,
+      },
+    }),
+    defineField({
       name: 'description',
       title: 'Description',
       type: 'text',

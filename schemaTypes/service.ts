@@ -26,22 +26,17 @@ export default defineType({
       type: 'array',
       of: [{type: 'block'}],
     },
-    defineField({
+    {
       name: 'skills',
       title: 'Skills',
       type: 'array',
       of: [{type: 'string'}],
-    }),
-    defineField({
-      name: 'project',
-      title: 'Project',
-      type: 'array',
-      of: [
-        {
-          type: 'reference',
-          to: {type: 'project'},
-        },
-      ],
-    }),
+    },
+    
+    "posts": *[_type == "post" && references(^._id)]{
+      title,
+      slug
+    }
+    
   ],
 })
