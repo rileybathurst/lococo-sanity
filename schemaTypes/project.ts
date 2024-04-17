@@ -4,6 +4,7 @@ export default defineType({
   name: 'project',
   title: 'Project',
   type: 'document',
+
   fields: [
     defineField({
       name: 'title',
@@ -43,6 +44,28 @@ export default defineType({
       title: 'Service',
       type: 'reference',
       to: [{type: 'service'}],
+    }),
+    defineField({
+      name: 'featured',
+      title: 'Featured',
+      type: 'boolean',
+    }),
+    {
+      name: 'steps',
+      title: 'Steps',
+      type: 'array',
+      of: [{type: 'steps'}],
+    },
+    defineField({
+      name: 'material',
+      title: 'Material',
+      type: 'array',
+      of: [
+        {
+          type: 'reference',
+          to: {type: 'material'},
+        },
+      ],
     }),
   ],
 })

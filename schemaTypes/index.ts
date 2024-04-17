@@ -8,6 +8,8 @@ import about from './about'
 import service from './service'
 import testimonial from './testimonial'
 import texture from './texture'
+import material from './material'
+import steps from './steps'
 
 export const schemaTypes = [
   post,
@@ -20,4 +22,6 @@ export const schemaTypes = [
   service,
   testimonial,
   texture,
+  material,
+  steps,
 ]

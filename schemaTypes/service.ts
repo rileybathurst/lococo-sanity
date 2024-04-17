@@ -20,6 +20,11 @@ export default defineType({
       title: 'Description',
       type: 'text',
     }),
+    defineField({
+      name: 'excerpt',
+      title: 'Excerpt',
+      type: 'text',
+    }),
     {
       title: 'Notes',
       name: 'notes',
@@ -32,11 +37,23 @@ export default defineType({
       type: 'array',
       of: [{type: 'string'}],
     },
-    
-    "posts": *[_type == "post" && references(^._id)]{
-      title,
-      slug
-    }
-    
+    defineField({
+      name: 'image',
+      title: 'Image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    }),
+    defineField({
+      name: 'texture',
+      title: 'Texture',
+      type: 'image',
+    }),
+    defineField({
+      name: 'order',
+      title: 'Order',
+      type: 'number',
+    }),
   ],
 })

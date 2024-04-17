@@ -29,6 +29,7 @@ export default defineConfig({
             S.documentTypeListItem('service').title('service'),
             S.documentTypeListItem('testimonial').title('testimonial'),
             S.documentTypeListItem('texture').title('texture'),
+            S.documentTypeListItem('material').title('material'),
           ]),
     }),
     visionTool(),
